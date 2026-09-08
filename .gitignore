@@ -1,4 +1,6 @@
+# Git Ignore File
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
+.Rproj
