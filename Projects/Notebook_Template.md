@@ -48,7 +48,7 @@ print("Hello World")
 
 -   Markdown Help Sheet:
 
-    ![](markdown-syntax-cheatsheet.png){width="671"}
+    ![](markdown-syntax-cheatsheet.png)
 
 ### Tables:
 
