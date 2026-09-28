@@ -8,16 +8,11 @@
 
 ## **[DATE] - Today's Task in a few words**
 
--   brief description of todays goals / what was done today
-
--   .......
-
--   ......
+-   [brief description of today's goals / what was done today]
 
 ### Working Directory:
 
--   `ecological_genomics/projects/[Transcrptiomics]`
--   `ecological_genomics/projects/[PopulationGenetics]`
+-   `/gpfs1/home/a/r/armccrac/eco_genomics_2026/[......]`
 
 ### Input Files:
 
@@ -29,34 +24,37 @@
 
 ### Scripts:
 
--   `ecological_genomics/projects/scripts/[scriptNameHere]`
+-   `ecological_genomics/projects/transcriptomics/scripts/[scriptNameHere]`
 
 ### Programs/Dependencies:
 
 -   `R version 4.6.1`
+
 -   `R-Studeo`
 
 ### Important Code / Parameters Run:
 
 ``` r
-print("Hello World")
+library()
+
+
+
+
 
 
 ```
 
 ### Graphs/Images:
 
--   Markdown Help Sheet:
-
-    ![](markdown-syntax-cheatsheet.png){width="671"}
+![](Projects/markdown-syntax-cheatsheet.png)
 
 ### Tables:
 
 | Col1 | Col2 | Col3 |
 |------|------|------|
-| xxx  | xxx  | xxx  |
-| xxx  | xxx  | xxx  |
-| xxx  | xxx  | xxx  |
+|      |      |      |
+|      |      |      |
+|      |      |      |
 
 ### Notes / Observations:
 
