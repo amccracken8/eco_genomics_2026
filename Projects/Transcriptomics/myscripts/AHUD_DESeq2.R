@@ -250,3 +250,46 @@ ggarrange(F0, F2, F4, F11, nrow = 2, ncol=2)
 # ggarrange(F0, F2, F4, F11, nrow = 2, ncol=2)
 # 
 # dev.off()
+
+########################## End Day 3 ####################################
+
+####################################################
+
+### Check on the DE results from the DESeq command way above 
+
+####################################################
+
+resultsNames(dds)
+# [1] "Intercept"            "generation_F11_vs_F0" "generation_F2_vs_F0"  "generation_F4_vs_F0" 
+# [5] "treatment_OA_vs_AM"   "treatment_OW_vs_AM"   "treatment_OWA_vs_AM" 
+
+resAM_OWA <- results(dds, name="treatment_OWA_vs_AM", alpha=0.05)
+resAM_OWA <- resAM_OWA[order(resAM_OWA$padj),]
+head(resAM_OWA)  
+summary(resAM_OWA)
+
+
+resAM_OW <- results(dds, name="treatment_OW_vs_AM", alpha=0.05)
+resAM_OW <- resAM_OW[order(resAM_OW$padj),]
+head(resAM_OW) 
+summary(resAM_OW)
+
+# And one more... ?!
+
+
+# Counts of specific top interaction gene! (important validatition that the normalization, model is working)
+d <-plotCounts(dds, gene="TRINITY_DN29_c1_g2::TRINITY_DN29_c1_g2_i3::g.744::m.744", intgroup = (c("treatment","generation")), returnData=TRUE)
+d
+
+p <-ggplot(d, aes(x=treatment, y=count, color=treatment, shape=generation)) + 
+  theme_minimal() + theme(text = element_text(size=20), panel.grid.major=element_line(colour="grey"))
+p <- p + geom_point(position=position_jitter(w=0.2,h=0), size=3)
+p <- p + stat_summary(fun = mean, geom = "line")
+p <- p + stat_summary(fun = mean, geom = "point", size=5, alpha=0.7) 
+p
+
+
+
+
+
+
